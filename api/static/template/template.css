@@ -39,6 +39,15 @@ svg {
   margin-left: 3rem;
 }
 
+.icons .emoji {
+  display: inline-block;
+  font-size: 15em;
+}
+
+.icons .emoji:not(:first-child) {
+  margin-left: 3rem;
+}
+
 .plus {
   color: #BBB;
   font-size: 100px;

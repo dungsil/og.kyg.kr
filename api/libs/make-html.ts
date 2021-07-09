@@ -50,7 +50,7 @@ function getCSSTemplate (): string {
  * @param options
  */
 function getIcons (options: RequestOptions): string[] | undefined {
-  if (!options.icons) {
+  if (!options.icons && !options.emojis) {
     return
   }
 
@@ -58,16 +58,24 @@ function getIcons (options: RequestOptions): string[] | undefined {
 
   if (Array.isArray(options.icons)) {
     for (const icon of options.icons) {
-      list.push(getSimpleIcon(icon))
+      list.push(getSimpleIcons(icon))
     }
-  } else {
-    list.push(getSimpleIcon(options.icons as string))
+  } else if (options.icons) {
+    list.push(getSimpleIcons(options.icons as string))
+  }
+
+  if (Array.isArray(options.emojis)) {
+    for (const emoji of options.emojis) {
+      list.push(twemoji.parse(emoji, { folder: 'svg', ext: '.svg' }))
+    }
+  } else if (options.emojis) {
+    list.push(twemoji.parse(options.emojis as string, { folder: 'svg', ext: '.svg' }))
   }
 
   return list
 }
 
-function getSimpleIcon (icon: string): string {
+function getSimpleIcons (icon: string): string {
   icon = icon.replace(/\./g, 'dot') // https://github.com/simple-icons/simple-icons/pull/5611
   const simpleIcon = simpleIcons[icon]
 

@@ -13,6 +13,7 @@ import makeHTML from './libs/make-html'
  */
 export interface RequestOptions {
   icons?: string[] | string
+  emojis?: string[] | string
   pattern?: string
   text: string
 }
@@ -25,11 +26,15 @@ export default async function handler (req: IncomingMessage, res: ServerResponse
   try {
     const options = parse(req)
     const html = makeHTML(options)
+    res.setHeader('Content-Type', 'text/html')
+    res.end(html)
 
+    /*
     const screenshot = await getScreenshot(html)
     res.setHeader('Cache-Control', 'public, immutable, no-transform, s-maxage=31536000, max-age=31536000')
 
     res.end(screenshot)
+   */
   } catch (e) {
     const noContent = readFileSync(join(__dirname, '/static/no-content.png')).toString('utf-8')
     res.end(noContent)
@@ -39,7 +44,7 @@ export default async function handler (req: IncomingMessage, res: ServerResponse
 function parse (req: IncomingMessage): RequestOptions {
   const url = new URL(req.url || '/', `https://${req.headers.host}/`)
   const query = parseQueryString(url.search.substr(1))
-  const { icons } = query
+  const { icons, emojis } = query
   let { pattern, text } = query
 
   if (text == null) {
@@ -56,6 +61,7 @@ function parse (req: IncomingMessage): RequestOptions {
 
   return {
     icons,
+    emojis,
     pattern,
     text
   }
