@@ -38,6 +38,8 @@ https://opengraph-api-dungsil.vercel.app/api?text=TypeScript로 Next.js 프로�
 https://opengraph-api-dungsil.vercel.app/api?text=Vercel로 내 프로젝트 배포🚀&icons=vercel
 ```
 
+## 배포
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fdungsil%2Fopengraph-api)
 
 ## 라이선스
 이 프로젝트의 소스코드는 [MIT License](./LICENSE)를 따릅니다.
