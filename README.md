@@ -21,21 +21,21 @@ Vercel사의 og-image 레파지토리를 블로그에서 사용하기 위해 커
 ## 사용방법
 
 ## 일반적인 사용방법
-![#](./.github/media/normal.png)
+![#](https://og.kyg.kr/api?text=Hello%20World)
 ```
-https://opengraph-api-dungsil.vercel.app/api?text=Hello%20World
+https://og.kyg.kr/api?text=Hello%20World
 ```
 
 ## 아이콘
-![#](./.github/media/with-icons.png)
+![#](https://og.kyg.kr/api?text=TypeScript%EB%A1%9C%20Next.js%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20(1)&icons=next.js&icons=typescript)
 ```
-https://opengraph-api-dungsil.vercel.app/api?text=TypeScript로 Next.js 프로젝트 시작하기 (1)&icons=next.js&icons=typescript
+https://og.kyg.kr/api?text=TypeScript로 Next.js 프로젝트 시작하기 (1)&icons=next.js&icons=typescript
 ```
 
 ## 이모지
-![#](./.github/media/with-emoji.png)
+![#](https://og.kyg.kr/api?text=Vercel%EB%A1%9C%20%EB%82%B4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%F0%9F%9A%80&icons=vercel)
 ```
-https://opengraph-api-dungsil.vercel.app/api?text=Vercel로 내 프로젝트 배포🚀&icons=vercel
+https://og.kyg.kr/api?text=Vercel로 내 프로젝트 배포🚀&icons=vercel
 ```
 
 ## 배포
