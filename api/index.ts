@@ -13,6 +13,7 @@ import makeHTML from './libs/make-html'
  */
 export interface RequestOptions {
   icons?: string[] | string
+  pattern?: string
   text: string
 }
 
@@ -39,7 +40,7 @@ function parse (req: IncomingMessage): RequestOptions {
   const url = new URL(req.url || '/', `https://${req.headers.host}/`)
   const query = parseQueryString(url.search.substr(1))
   const { icons } = query
-  let { text } = query
+  let { pattern, text } = query
 
   if (text == null) {
     throw new Error('Text is null')
@@ -49,8 +50,13 @@ function parse (req: IncomingMessage): RequestOptions {
     text = text[0]
   }
 
+  if (Array.isArray(pattern)) {
+    pattern = pattern[0]
+  }
+
   return {
     icons,
+    pattern,
     text
   }
 }

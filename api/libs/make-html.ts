@@ -25,17 +25,16 @@ function getTemplate (options: RequestOptions): string {
 
   return readFileSync(join(__dirname, '../static/template/template.html'))
     .toString('utf-8')
+    .replace(/{{\s+?pattern\s+}}/g, escapeHTML(options.pattern ?? 'topography'))
     .replace(/{{\s+?text\s+}}/g, escapeHTML(options.text))
-    .replace(/{{\s+?style\s+}}/g, getCSSTemplate(options))
+    .replace(/{{\s+?style\s+}}/g, getCSSTemplate())
     .replace(/{{\s+?icon\s+}}/g, icons.join('<span class="icon plus">+</span>'))
 }
 
 /**
  * CSS 템플릿
- *
- * @param _ 추후 사용 예정
  */
-function getCSSTemplate (_: RequestOptions): string {
+function getCSSTemplate (): string {
   const css = readFileSync(join(__dirname, '../static/template/template.css'))
     .toString('utf-8')
 
