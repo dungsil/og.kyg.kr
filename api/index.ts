@@ -26,15 +26,11 @@ export default async function handler (req: IncomingMessage, res: ServerResponse
   try {
     const options = parse(req)
     const html = makeHTML(options)
-    res.setHeader('Content-Type', 'text/html')
-    res.end(html)
 
-    /*
     const screenshot = await getScreenshot(html)
     res.setHeader('Cache-Control', 'public, immutable, no-transform, s-maxage=31536000, max-age=31536000')
 
     res.end(screenshot)
-   */
   } catch (e) {
     const noContent = readFileSync(join(__dirname, '/static/no-content.png')).toString('utf-8')
     res.end(noContent)
