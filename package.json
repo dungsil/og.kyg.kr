@@ -1,0 +1,37 @@
+{
+  "name": "@dungsil/og-image",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "lint:js": "eslint --ext .ts --ignore-path .gitignore .",
+    "lint:type": "tsc --noEmit",
+    "lint": "run-p lint:*",
+    "lintfix:js": "yarn lint:js --fix",
+    "lintfix": "run-p lintfix:*",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "10.0.0",
+    "puppeteer-core": "10.1.0",
+    "simple-icons": "5.5.0",
+    "twemoji": "13.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@dungsil/commitlint-config": "1.0.0",
+    "@dungsil/eslint-config": "1.0.0",
+    "@types/node": "15.12.2",
+    "@types/simple-icons": "5.0.1",
+    "@types/twemoji": "12.1.1",
+    "eslint": "7.30.0",
+    "husky": "7.0.1",
+    "lint-staged": "11.0.0",
+    "npm-run-all": "4.1.5",
+    "typescript": "4.3.5",
+    "vercel": "23.0.1"
+  },
+  "resolutions": {
+    "sharp": "0.27.2"
+  }
+}

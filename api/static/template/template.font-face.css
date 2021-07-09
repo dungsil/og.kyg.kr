@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  src: url(data:font/woff2;charset=utf-8;base64,{{ font }})  format("woff2");
+}
