@@ -1,8 +1,7 @@
 <h1>
   오픈그래프 API
-
-  <a href="https://github.com/vercel/og-image" style="float: right;">
-    <img src="https://img.shields.io/badge/forked%20from-vercel%2Fog--image-000?logo=vercel&style=for-the-badge" alt="forked from vercel/og-image" />
+  <a href="https://github.com/vercel/og-image" target="_blank">
+    <img src="https://img.shields.io/badge/forked%20from-vercel%2Fog--image-000?logo=vercel&style=for-the-badge" alt="forked from vercel/og-image" align="right" />
   </a>
 </h1>
 
