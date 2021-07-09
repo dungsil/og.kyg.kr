@@ -58,26 +58,26 @@ function getIcons (options: RequestOptions): string[] | undefined {
 
   if (Array.isArray(options.icons)) {
     for (const icon of options.icons) {
-      list.push(action(icon))
+      list.push(getSimpleIcon(icon))
     }
   } else {
-    list.push(action(options.icons as string))
+    list.push(getSimpleIcon(options.icons as string))
   }
 
   return list
+}
 
-  function action (icon: string): string {
-    icon = icon.replace(/\./g, 'dot') // https://github.com/simple-icons/simple-icons/pull/5611
-    const simpleIcon = simpleIcons[icon]
+function getSimpleIcon (icon: string): string {
+  icon = icon.replace(/\./g, 'dot') // https://github.com/simple-icons/simple-icons/pull/5611
+  const simpleIcon = simpleIcons[icon]
 
-    if (!simpleIcon) {
-      return ''
-    }
-
-    const coloredIcon = simpleIcon.svg.replace(/<(path|g)/g, `<$1 fill="#${simpleIcon.hex}"`)
-
-    return `<span class="icon">${coloredIcon}</span>`
+  if (!simpleIcon) {
+    return ''
   }
+
+  const coloredIcon = simpleIcon.svg.replace(/<(path|g)/g, `<$1 fill="#${simpleIcon.hex}"`)
+
+  return `<span class="icon">${coloredIcon}</span>`
 }
 
 /**
