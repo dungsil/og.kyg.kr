@@ -374,13 +374,6 @@
     eslint-plugin-standard "^4.0.1"
     eslint-plugin-unicorn "^22.0.0"
 
-"@dungsil/eslint-config-vue@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@dungsil/eslint-config-vue/-/eslint-config-vue-1.0.0.tgz#5e0bbe7e85fafe6254c49a821ae8b8b345eb08c2"
-  integrity sha512-aB0LzEAuKQFlub2AD/cx+TvyWDQ0XE3M9mlNCxZBny639itaCIK6wadYIRkQi4UZ9lALAFGJ8hzMu9vQjLgo0Q==
-  dependencies:
-    eslint-plugin-vue "^7.0.1"
-
 "@dungsil/eslint-config@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@dungsil/eslint-config/-/eslint-config-1.0.0.tgz#baafad29e990ced282e5d5e42616d8e68e70d0a0"
@@ -482,12 +475,12 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/simple-icons@^5.0.1":
+"@types/simple-icons@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@types/simple-icons/-/simple-icons-5.0.1.tgz#7fb48b30aae769d229d463cc41992e5512ed3a62"
   integrity sha512-m00W0rcaXhyGD2YaZljj+Q/VdkEm+o4pbRm8UTDWGtAUeDNvoSxq/00xGQy4SWZb4kXN/enLLXYfcKoUF7jOvw==
 
-"@types/twemoji@^12.1.1":
+"@types/twemoji@12.1.1":
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/@types/twemoji/-/twemoji-12.1.1.tgz#34c5dcecff438b5be173889a6ee8ad51ba90445f"
   integrity sha512-dW1B1WHTfrWmEzXb/tp8xsZqQHAyMB9JwLwbBqkIQVzmNUI02R7lJqxUpKFM114ygNZHKA1r74oPugCAiYHt1A==
@@ -605,12 +598,12 @@ JSONStream@^1.0.4:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
-acorn-jsx@^5.2.0, acorn-jsx@^5.3.1:
+acorn-jsx@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.1.tgz#fc8661e11b7ac1539c47dbfea2e72b3af34d267b"
   integrity sha512-K0Ptm/47OKfQRpNQ2J/oIN/3QYiK6FwW+eJbILhsdxh2WTLdl+30o8aGdTbm5JbffpFFAg/g+zi1E+jvJha5ng==
 
-acorn@^7.1.1, acorn@^7.4.0:
+acorn@^7.4.0:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
@@ -930,7 +923,7 @@ chownr@^1.1.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
-chrome-aws-lambda@^10.0.0:
+chrome-aws-lambda@10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/chrome-aws-lambda/-/chrome-aws-lambda-10.0.0.tgz#a1693d75c34b5d069765334f44cb331365501e6b"
   integrity sha512-zer0p8IYw0PPTKzws638x3GvPzZXASMvwi6d7RYEiRfP98wmx0rPgON0czfFGPEwe3XmPC2Wn7F9vckhlb6ydA==
@@ -1493,16 +1486,6 @@ eslint-plugin-unicorn@^22.0.0:
     safe-regex "^2.1.1"
     semver "^7.3.2"
 
-eslint-plugin-vue@^7.0.1:
-  version "7.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.13.0.tgz#6f3d232bf1fcd0428353b0d581ebaca1c5dbc17a"
-  integrity sha512-u0+jL8h2MshRuMTCLslktxRsPTjlENNcNufhgHu01N982DmHVdeFniyMPoVLLRjACQOwdz3FdlsgYGBMBG+AKg==
-  dependencies:
-    eslint-utils "^2.1.0"
-    natural-compare "^1.4.0"
-    semver "^7.3.2"
-    vue-eslint-parser "^7.8.0"
-
 eslint-scope@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
@@ -1591,15 +1574,6 @@ eslint@7.30.0:
     table "^6.0.9"
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
-
-espree@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-6.2.1.tgz#77fc72e1fd744a2052c20f38a5b575832e82734a"
-  integrity sha512-ysCxRQY3WaXJz9tdbWOwuWr5Y/XrPTGX9Kiz3yoUXwW0VZ4w30HTkQLaGx/+ttFjF8i+ACbArnB4ce68a9m5hw==
-  dependencies:
-    acorn "^7.1.1"
-    acorn-jsx "^5.2.0"
-    eslint-visitor-keys "^1.1.0"
 
 espree@^7.3.0, espree@^7.3.1:
   version "7.3.1"
@@ -2499,7 +2473,7 @@ lodash.zip@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
-lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -3106,7 +3080,7 @@ pupa@^2.0.1:
   dependencies:
     escape-goat "^2.0.0"
 
-puppeteer-core@^10.1.0:
+puppeteer-core@10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-10.1.0.tgz#ffd9fd780ad237b9ac23cc95cbb919be5e4523a5"
   integrity sha512-x2yDSJI/PRiWhDqAt1jd4rhTotxwjwKzHLIIqD2MlJ+TmzGJfBY9snAGIVXJwkWfKJg+Ef5xupdK0EbHDqBpFw==
@@ -3444,10 +3418,10 @@ simple-get@^4.0.0:
     once "^1.3.1"
     simple-concat "^1.0.0"
 
-simple-icons@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-5.5.0.tgz#06efc93e135ffb05aee712eec0c3439fa8f91bf4"
-  integrity sha512-FiC/qOTe2CVRbur7SYOg1iPbAo5AkrBWDiv9khmfPnZyxtu8AyDF7aj+blNuuN77zVCFSuu4j71yJ5q+WJwIDQ==
+simple-icons@5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-5.6.0.tgz#8b04a588fbac3ad11e12dba4f2e4ff60ddc27846"
+  integrity sha512-MAcWUwedo41+oYqg4VM3kLaYHaQnoLoH921C0v9/P9EGTM8PhvAaVqsR6w5YOOLa7PPJejiZRr48UJCelIl9lw==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -3833,7 +3807,7 @@ twemoji-parser@13.1.0:
   resolved "https://registry.yarnpkg.com/twemoji-parser/-/twemoji-parser-13.1.0.tgz#65e7e449c59258791b22ac0b37077349127e3ea4"
   integrity sha512-AQOzLJpYlpWMy8n+0ATyKKZzWlZBJN+G0C+5lhX7Ftc2PeEVdUU/7ns2Pn2vVje26AIZ/OHwFoUbdv6YYD/wGg==
 
-twemoji@^13.1.0:
+twemoji@13.1.0:
   version "13.1.0"
   resolved "https://registry.yarnpkg.com/twemoji/-/twemoji-13.1.0.tgz#65bb71e966dae56f0d42c30176f04cbdae109913"
   integrity sha512-e3fZRl2S9UQQdBFLYXtTBT6o4vidJMnpWUAhJA+yLGR+kaUTZAt3PixC0cGvvxWSuq2MSz/o0rJraOXrWw/4Ew==
@@ -3989,19 +3963,6 @@ vercel@23.0.1:
     "@vercel/python" "2.0.4"
     "@vercel/ruby" "1.2.6"
     update-notifier "4.1.0"
-
-vue-eslint-parser@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.8.0.tgz#43850bf856c9a69d62c0e12769609c338423684b"
-  integrity sha512-ehmmrLZNYLUoKayvVW8l8HyPQIfuYZHiJoQLRP3dapDlTU7bGs4tqIKVGdAEpMuXS/b4R/PImCt7Tkj4UhX1SQ==
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.1.1"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
-    esquery "^1.4.0"
-    lodash "^4.17.21"
-    semver "^6.3.0"
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
