@@ -16,7 +16,9 @@ Vercel사의 og-image 레파지토리를 블로그에서 사용하기 위해 커
     * 이미지 추가 불가능
 3. [Simple Icons][SIMPLE_ICONS] 으로 아이콘 표시
     * 사용 전 반드시 [Disclaimer][SIMPLE_ICONS_DISCLAIMER]를 읽어주세요.
-4. 한국어 표시를 위해 [Pretendard][PRETENDARD]폰트로 대체
+4. 이미지에 이모지 사용 가능
+5. 한국어 표시를 위해 [Pretendard][PRETENDARD]폰트로 대체
+6. 배경 색 및 폰트 색상 변경 기능 추가
 
 ## 사용방법
 
@@ -31,11 +33,24 @@ https://og.kyg.kr/api?text=Hello%20World
 ```
 https://og.kyg.kr/api?text=TypeScript로 Next.js 프로젝트 시작하기 (1)&icons=next.js&icons=typescript
 ```
+ - 아이콘 목록은 https://simpleicons.org/ 를 참고해주세요.
 
 ## 이모지
 ![#](https://og.kyg.kr/api?text=Vercel%EB%A1%9C%20%EB%82%B4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC%F0%9F%9A%80&icons=vercel)
 ```
 https://og.kyg.kr/api?text=Vercel로 내 프로젝트 배포🚀&icons=vercel
+```
+
+![#](https://og.kyg.kr/api?text=Vercel%EB%A1%9C%20%EB%82%B4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EB%B0%B0%ED%8F%AC&emojis=🚀)
+```
+https://og.kyg.kr/api?text=Vercel로 내 프로젝트 배포&emojis=🚀
+```
+ - 이모지 13 지원
+
+## 배경 및 글자 색
+![#](https://og.kyg.kr/api?text=색깔이%20바뀝니다&background=%23d0bfff&color=rgb(132,94,247))
+```
+https://og.kyg.kr/api?text=색깔이 바뀝니다&background=%23d0bfff&color=rgb(132,94,247)
 ```
 
 ## 배포
