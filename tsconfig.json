@@ -20,7 +20,7 @@
       "@types/twemoji"
     ]
   },
-  "include": ["./"],
+  "include": ["./api"],
   "exclude": [
     "**/node_modules"
   ]
