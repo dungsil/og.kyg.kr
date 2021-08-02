@@ -16,6 +16,7 @@ export interface RequestOptions {
   emojis?: string[] | string
   pattern?: string
   background?: string
+  color?: string
   text: string
 }
 
@@ -42,7 +43,7 @@ function parse (req: IncomingMessage): RequestOptions {
   const url = new URL(req.url || '/', `https://${req.headers.host}/`)
   const query = parseQueryString(url.search.substr(1))
   const { icons, emojis } = query
-  let { pattern, text, background } = query
+  let { pattern, text, background, color } = query
 
   if (text == null) {
     throw new Error('Text is null')
@@ -60,11 +61,16 @@ function parse (req: IncomingMessage): RequestOptions {
     background = background[0]
   }
 
+  if (Array.isArray(color)) {
+    color = color[0]
+  }
+
   return {
     icons,
     emojis,
     pattern,
     background,
+    color,
     text
   }
 }

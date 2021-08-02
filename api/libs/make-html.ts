@@ -25,11 +25,12 @@ function getTemplate (options: RequestOptions): string {
 
   return readFileSync(join(__dirname, '../static/template/template.html'))
     .toString('utf-8')
-    .replace(/{{\s+?pattern\s+}}/g, escapeHTML(options.pattern ?? ''))
-    .replace(/{{\s+?background\s+}}/g, options.background ?? '#ffffff')
-    .replace(/{{\s+?text\s+}}/g, escapeHTML(options.text))
-    .replace(/{{\s+?style\s+}}/g, getCSSTemplate())
-    .replace(/{{\s+?icon\s+}}/g, icons.join('<span class="icon plus">+</span>'))
+    .replace(/{{\s+?pattern\s+?}}/g, escapeHTML(options.pattern ?? ''))
+    .replace(/{{\s+?background\s+?}}/g, options.background ?? '#ffffff')
+    .replace(/{{\s+?color\s+?}}/g, options.background ?? '#343a40')
+    .replace(/{{\s+?text\s+?}}/g, escapeHTML(options.text))
+    .replace(/{{\s+?style\s+?}}/g, getCSSTemplate())
+    .replace(/{{\s+?icon\s+?}}/g, icons.join('<span class="icon plus">+</span>'))
 }
 
 /**
