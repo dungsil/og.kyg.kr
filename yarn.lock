@@ -362,10 +362,10 @@
   dependencies:
     "@commitlint/config-conventional" "11.0.0 || 12.0.0"
 
-"@dungsil/eslint-config@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@dungsil/eslint-config/-/eslint-config-1.0.2.tgz#4bd62ea13962891720ac374fd76697d8f71c217e"
-  integrity sha512-JBxCJgl9KnNZgV4cDtb3gBPcH+ckogvDH4yDG/llFBB9wDRuW8bnP7M5DSr4pSKi0v3EpJ2GDphfVeIxW0dNVg==
+"@dungsil/eslint-config@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@dungsil/eslint-config/-/eslint-config-1.0.3.tgz#179f71f4d9cd1c3880b017032ca535342d0c128a"
+  integrity sha512-EGtolNn5Vq8oqiHhG9fcwj9tCOV2Of6csP7QcVKTTgR+TPhM+2GmVXmXES78+9c+VFMioCmd+dToxE3k9+KOGA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.30.0"
     "@typescript-eslint/parser" "4.30.0"
@@ -375,7 +375,6 @@
     eslint-plugin-jest "24.4.0"
     eslint-plugin-node "11.1.0"
     eslint-plugin-promise "5.1.0"
-    eslint-plugin-standard "5.0.0"
     eslint-plugin-unicorn "35.0.0"
 
 "@eslint/eslintrc@^0.4.3":
@@ -1493,11 +1492,6 @@ eslint-plugin-promise@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-5.1.0.tgz#fb2188fb734e4557993733b41aa1a688f46c6f24"
   integrity sha512-NGmI6BH5L12pl7ScQHbg7tvtk4wPxxj8yPHH47NvSmMtFneC077PSeY3huFj06ZWZvtbfxSPt3RuOQD5XcR4ng==
-
-eslint-plugin-standard@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-5.0.0.tgz#c43f6925d669f177db46f095ea30be95476b1ee4"
-  integrity sha512-eSIXPc9wBM4BrniMzJRBm2uoVuXz2EPa+NXPk2+itrVt+r5SbKFERx/IgrK/HmfjddyKVz2f+j+7gBRvu19xLg==
 
 eslint-plugin-unicorn@35.0.0:
   version "35.0.0"
