@@ -20,7 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@dungsil/commitlint-config": "1.0.0",
-    "@dungsil/eslint-config": "1.0.2",
+    "@dungsil/eslint-config": "1.0.3",
     "@types/node": "15.12.2",
     "@types/simple-icons": "5.8.0",
     "@types/twemoji": "12.1.2",
