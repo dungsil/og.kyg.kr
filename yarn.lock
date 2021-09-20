@@ -362,10 +362,10 @@
   dependencies:
     "@commitlint/config-conventional" "11.0.0 || 12.0.0"
 
-"@dungsil/eslint-config@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@dungsil/eslint-config/-/eslint-config-1.0.3.tgz#179f71f4d9cd1c3880b017032ca535342d0c128a"
-  integrity sha512-EGtolNn5Vq8oqiHhG9fcwj9tCOV2Of6csP7QcVKTTgR+TPhM+2GmVXmXES78+9c+VFMioCmd+dToxE3k9+KOGA==
+"@dungsil/eslint-config@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@dungsil/eslint-config/-/eslint-config-1.1.1.tgz#a34381b720823fd9efbeb3b560a69b01868c6292"
+  integrity sha512-VjlP1e2O/QmuGRv/wWJEN3ThQ9bnvPnTqeyWs0Ox9uUobST0W5h2E1876HetOCVMfxTFhWUpi+mkfjdnDKLsJQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.30.0"
     "@typescript-eslint/parser" "4.30.0"
