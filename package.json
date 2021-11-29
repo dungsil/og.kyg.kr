@@ -18,7 +18,7 @@
     "twemoji": "13.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "14.1.0",
+    "@commitlint/cli": "15.0.0",
     "@dungsil/commitlint-config": "1.0.0",
     "@dungsil/eslint-config": "1.2.0",
     "@types/node": "15.12.2",
