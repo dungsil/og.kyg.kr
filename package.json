@@ -1,0 +1,16 @@
+{
+  "name": "opengraph-api",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vc dev"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@vercel/node": "^1.12.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.4.4",
+    "vercel": "^23.1.2"
+  }
+}
