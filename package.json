@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "vc dev"
   },
+  "dependencies": {
+    "consola": "^2.15.3",
+    "defu": "^5.0.0",
+    "smartwrap": "^2.0.2"
+  },
   "devDependencies": {
     "@types/node": "^16.11.12",
     "@vercel/node": "^1.12.1",
