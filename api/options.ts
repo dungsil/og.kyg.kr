@@ -36,14 +36,16 @@ export function parseOption(req: VercelRequest): Options {
   }
 
   // description
-  const descriptionList = wrap(description, { width: 70, trim: true, breakword: true })
-    .split('\n')
-    .map((t: string) => t ? `<tspan x="70px" dy="1.2em">${t.trim()}</tspan>` : '')
+  if (description) {
+    const descriptionList = wrap(description, { width: 70, trim: true, breakword: true })
+      .split('\n')
+      .map((t: string) => t ? `<tspan x="70px" dy="1.2em">${t.trim()}</tspan>` : '')
 
-  if (descriptionList.length > 3) {
-    description = descriptionList[0] + descriptionList[1] + descriptionList[2] + '...'
-  } else {
-    description = descriptionList.join('')
+    if (descriptionList.length > 3) {
+      description = descriptionList[0] + descriptionList[1] + descriptionList[2] + '...'
+    } else {
+      description = descriptionList.join('')
+    }
   }
 
   const reqOptions: Partial<Options> = {
