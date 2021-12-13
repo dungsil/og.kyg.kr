@@ -1,4 +1,5 @@
 import log, { LogLevel } from 'consola'
+import wrap from 'smartwrap'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Options, parseOption } from './options'
 import { isProduction } from './utils'
@@ -12,9 +13,9 @@ export default (req: VercelRequest, res: VercelResponse) => {
   const options = parseOption(req)
 
   let template = getTemplate(options)
-    .replaceAll("{{title}}", options.title)
+    .replaceAll("{{title}}", wrapText(options.title))
     .replaceAll("{{category}}", options.category ?? '')
-    .replaceAll("{{description}}", options.description ?? '')
+    .replaceAll("{{description}}", wrapText(options.description, 70))
     .replaceAll('{{border_color}}', '#3178C6')
     .replaceAll(
       "{{image_url}}",
@@ -26,6 +27,16 @@ export default (req: VercelRequest, res: VercelResponse) => {
       res.end(template)
       break
   }
+}
+
+function wrapText(text: string | undefined, width: number = 20): string {
+  if (!text) {
+    return ''
+  }
+
+  return wrap(text, { width, trim: true, breakword: true })
+    .split('\n')
+    .map((s: string) => `<tspan x="70px" dy="1.2em">${s.trim()}</tspan>`)
 }
 
 function getTemplate(options: Options): string {

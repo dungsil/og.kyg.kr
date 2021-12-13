@@ -6,7 +6,7 @@
     svg {
         font-family: Pretendard, sans-serif;
         font-weight: 400;
-        font-size: 18pt;
+        font-size: 12pt;
         overflow-wrap: break-word;
     }
     .category {
