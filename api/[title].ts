@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Options, parseOption } from './options'
 import { isProduction } from './utils'
 import { readFileSync } from 'fs'
-import { resolve } from 'path'
+import { join } from 'path'
 
 // 로그 레벨 정의
 log.level = isProduction ? LogLevel.Info : LogLevel.Debug
@@ -29,5 +29,5 @@ export default (req: VercelRequest, res: VercelResponse) => {
 }
 
 function getTemplate(options: Options): string {
-  return readFileSync(resolve(__dirname, './template', `${options.theme}.svg`)).toString('utf-8')
+  return readFileSync(join(__dirname, './template', `${options.theme}.svg`)).toString('utf-8')
 }
