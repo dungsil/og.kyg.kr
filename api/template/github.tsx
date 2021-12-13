@@ -1,5 +1,7 @@
+import { wrapSvgText } from '../utils'
+import type { Options } from '../options'
 
-export default function github() {
+export default function github(options: Options) {
   return `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
   <svg xmlns="http://www.w3.org/2000/svg" version="1.2" width="1024px" height="512px">
       <style>
@@ -27,17 +29,27 @@ export default function github() {
           ]]>
       </style>
       <pattern id="image" x="0" y="0" width="1" height="1">
-          <image x="0" y="0" href="{{image_url}}" />
+          <image x="0" y="0" href="${getIcon(options)}" />
       </pattern>
   
       <rect width="1024px" height="1024px" fill="#fff" />
-      <text x="70px" y="75pt" class="category">{{category}}</text>
-      <text x="70px" y="75pt" class="title">{{title}}</text>
+      <text x="70px" y="75pt" class="category">${options.category ?? ''}</text>
+      <text x="70px" y="75pt" class="title">${wrapSvgText(options.title, 20)}</text>
   
-      <text x="70px" y="220pt" class="description">{{description}}</text>
+      <text x="70px" y="220pt" class="description">${wrapSvgText(options.description, 70)}</text>
   
       <circle cx="850px" cy="127pt" r="100" fill="url(#image)" />
   
-      <rect x="0" y="502px" width="1024px" height="10px" fill="{{border_color}}" />
+      <rect x="0" y="502px" width="1024px" height="10px" fill="blue" />
   </svg>`
+}
+
+function getIcon (options: Options) {
+  const { iconify } = options
+
+  if (iconify) {
+    return `https://api.iconify.design/${iconify}.svg?width=200&amp;height=200`
+  }
+
+  return ''
 }
