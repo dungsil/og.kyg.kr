@@ -1,8 +1,7 @@
 {
   "functions": {
-    "api/**": {
-      "memory": 1024,
-      "includeFiles": "./template/**"
+    "api/**/*": {
+      "memory": 1024
     }
   }
 }

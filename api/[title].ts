@@ -3,8 +3,9 @@ import wrap from 'smartwrap'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Options, parseOption } from './options'
 import { isProduction } from './utils'
-import { readFileSync } from 'fs'
-import { join } from 'path'
+
+// svg
+import svgGithub from './template/github'
 
 // 로그 레벨 정의
 log.level = isProduction ? LogLevel.Info : LogLevel.Debug
@@ -12,7 +13,7 @@ log.level = isProduction ? LogLevel.Info : LogLevel.Debug
 export default (req: VercelRequest, res: VercelResponse) => {
   const options = parseOption(req)
 
-  let template = getTemplate(options)
+  let template = svgGithub()
     .replaceAll("{{title}}", wrapText(options.title))
     .replaceAll("{{category}}", options.category ?? '')
     .replaceAll("{{description}}", wrapText(options.description, 70))
@@ -39,6 +40,3 @@ function wrapText(text: string | undefined, width: number = 20): string {
     .map((s: string) => `<tspan x="70px" dy="1.2em">${s.trim()}</tspan>`)
 }
 
-function getTemplate(options: Options): string {
-  return readFileSync(join(__dirname, './template', `${options.theme}.svg`)).toString('utf-8')
-}
